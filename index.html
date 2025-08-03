@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kafein yonk.</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,7 +36,6 @@
       font-family: "Poppins", sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
-      min-height: 2000000px;
     }
 
     p {
@@ -53,13 +52,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 6%;
-      background-color: var(--secondary-color);
-      border-bottom: 2px solid var(--background-color);
+      background-color: transparent;
+      border-bottom: 2px solid var(--primary-color);
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 999;
+      backdrop-filter: blur(10px);
     }
 
     .logo {
@@ -148,7 +148,7 @@
       display: inline-block;
       padding: 0.8rem 2rem;
       background-color: var(--primary-color);
-      color: var(--text-color);
+      color: var(--tertiary-color);
       border-radius: 5px;
       font-size: 10px;
       border: var(--primary-color) 2px solid;
@@ -156,7 +156,7 @@
     }
 
     .home .content .cta:hover {
-      background-color: var(--background-color);
+      background-color: var(--tertiary-color);
       color: var(--primary-color);
     }
 
@@ -171,15 +171,253 @@
       background: linear-gradient(
         180deg,
         rgba(30, 30, 30, 0) 0%,
-        rgba(30, 30, 30, 0.3) 20%,
-        rgba(30, 30, 30, 0.6) 40%,
-        rgba(30, 30, 30, 0.8) 60%,
-        rgba(30, 30, 30, 1) 80%
+        rgba(30, 30, 30, 0.05) 10%,
+        rgba(30, 30, 30, 0.1) 20%,
+        rgba(30, 30, 30, 0.2) 30%,
+        rgba(30, 30, 30, 0.35) 40%,
+        rgba(30, 30, 30, 0.5) 50%,
+        rgba(30, 30, 30, 0.65) 60%,
+        rgba(30, 30, 30, 0.75) 70%,
+        rgba(30, 30, 30, 0.85) 80%,
+        rgba(30, 30, 30, 0.92) 90%,
+        rgba(30, 30, 30, 1) 100%
       );
     }
-    
 
-    
+    .about {
+      padding: 10rem 7% 1.4rem;
+    }
+
+    .about h2 {
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      color: var(--tertiary-color);
+    }
+
+    .about h2 span {
+      color: var(--primary-color);
+    }
+
+    .about .row {
+      display: flex;
+    }
+
+    .about .row .about-img {
+      flex: 1 1 45rem;
+    }
+
+    .about .row .about-img img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+
+    .about .row .content {
+      flex: 1 1 35rem;
+      padding: 0 1rem;
+    }
+
+    .about .row .content h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .about .row .content p {
+      font-size: 1.3rem;
+    }
+
+    .menus .content h2 {
+      padding-top: 6rem;
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      color: var(--tertiary-color);
+    }
+
+    .menus .content h2 span {
+      color: var(--primary-color);
+    }
+
+    .menus .content p {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      max-width: 30rem;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .menus .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .menus .row .menus-item {
+      flex: 1 1 16rem;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .menus .row .menus-item img {
+      width: 16rem;
+      margin-left: 1.7rem;
+      margin-right: 1.7rem;
+      height: 16rem;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      border: solid 5px var(--primary-color);
+    }
+
+    .menus .row .menus-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .menus .row .menus-title {
+      font-size: 1.3rem;
+    }
+
+    .menus .row .menus-price {
+      font-size: 1rem;
+    }
+
+    .menus .row .menus-item .cta {
+      display: inline-block;
+      padding: 0.4rem 1.5rem;
+      background-color: var(--primary-color);
+      color: var(--tertiary-color);
+      border-radius: 5px;
+      font-size: 0.7rem;
+      border: solid 2px var(--primary-color);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menus .row .menus-item .cta:hover {
+      background-color: var(--tertiary-color);
+      color: var(--primary-color);
+    }
+
+    .contact {
+      padding: 10rem 7% 1.4rem;
+      padding-bottom: 5rem;
+    }
+
+
+    .contact h2 {
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      color: var(--tertiary-color);
+    }
+
+    .contact h2 span {
+      color: var(--primary-color);
+    }
+
+    .contact .content p {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      max-width: 30rem;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .contact .form {
+      display: flex;
+      background-color: var(--secondary-color);
+      margin-top: 2rem;
+      border-radius: 50px;
+      flex-wrap: wrap;
+      border: solid 3px var(--primary-color);
+    }
+
+    .contact .form .map {
+      flex: 1 1 45rem;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      border: 3px solid var(--primary-color);
+      border-radius: 50px;
+    }
+
+    .contact .form form {
+      flex: 1 1 45rem;
+      padding: 5rem 2rem;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    .contact .form form .input-group {
+      display: flex;
+      align-items: center;
+      background-color: var(--background-color);
+      border: 1px solid var(--primary-color);
+      margin-top: 1rem;
+      border-radius: 20px;
+      border: 3px solid var(--primary-color);
+    }
+
+    .contact .form form .input-group input {
+      width: 100%;
+      padding: 2rem;
+      border: 2px solid var(--primary-color);
+      border-radius: 20px;
+      font-size: 1rem;
+      background: none;
+    }
+
+    .contact .form form .input-group i {
+      width: 16%;
+      font-size: 1.5rem;
+      background: none;
+      color: var(--secondary-color);
+      opacity: 0.5;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 1rem 2.2rem;
+      background-color: var(--primary-color);
+      color: var(--tertiary-color);
+      border-radius: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: var(--primary-color) 2px solid;
+      transition: all 0.3s ease-in-out;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    }
+
+    .btn:hover {
+      background-color: var(--tertiary-color);
+      color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      padding: 2rem 6%;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+
+    .social i{
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
 
     @media (max-width: 1366px) {
       html {
@@ -283,7 +521,7 @@
     <section id="home" class="home">
       <div class="content">
         <h1>Hitam-nya Kopiku, <span>Sehitam Dirimu</span></h1>
-        <p>Tak seharusnya kita berpisah, tak smestinya kita bertengkar.</p>
+        <p id="desc">Kalau saja aku bukanlah penganggur</p>
         <a href="#" class="cta">Tumbas Now</a>
       </div>
     </section>
@@ -304,6 +542,7 @@
               pelayanan yang ramah, kami siap menyajikan berbagai jenis kopi
               pilihan yang akan memanjakan lidah Anda.
             </p>
+            <br />
             <p>
               Kami percaya bahwa kopi bukan hanya sekadar minuman, tetapi juga
               sebuah pengalaman. Di Kafe Inyonk, kami mengutamakan kualitas biji
@@ -315,27 +554,107 @@
         </div>
       </div>
     </section>
-    <!--
     <section id="menus" class="menus">
       <div class="content">
-        <h2>Menu Kami</h2>
-        <div class="menu-item">
-          <img src="" alt="" />
-          <h3>Kopi Hitam</h3>
-          <p>Rp. 15.000</p>
-        </div>
-        <div class="menu-item">
-          <img src="" alt="" />
-          <h3>Kopi Susu</h3>
-          <p>Rp. 20.000</p>
-        </div>
-        <div class="menu-item">
-          <img src="" alt="" />
-          <h3>Kopi Arabika</h3>
-          <p>Rp. 25.000</p>
+        <h2>
+          <b>Menu <span>Kami</span></b>
+        </h2>
+        <p>
+          Kami menyediakan berbagai pilihan kopi hitam yang lezat, mulai dari
+          espresso yang kuat hingga cappuccino yang creamy. Setiap cangkir kopi
+          kami disajikan dengan penuh cinta dan perhatian, sehingga Anda dapat
+          menikmati momen santai Anda dengan sempurna.
+        </p>
+        <div class="row">
+          <div class="menus-item">
+            <img src="properties/americano.jpg" alt="" />
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
+          <div class="menus-item">
+            <img src="properties/americano.jpg" alt="" />
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
+          <div class="menus-item">
+            <div class="item-img">
+              <img src="properties/americano.jpg" alt="" />
+            </div>
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
+          <div class="menus-item">
+            <img src="properties/americano.jpg" alt="" />
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
+          <div class="menus-item">
+            <img src="properties/americano.jpg" alt="" />
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
+          <div class="menus-item">
+            <img src="properties/americano.jpg" alt="" />
+            <h3 class="menus-title">Kopi Susu</h3>
+            <p class="menus-price">Rp. 25.000</p>
+            <a href="#" class="cta">Beli Sekarang</a>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
+    <section id="contact" class="contact">
+      <div class="content">
+        <h2>
+          <b>Kontak <span>Kami</span></b>
+        </h2>
+        <p>
+          Jika Anda memiliki pertanyaan atau ingin melakukan reservasi, jangan
+          ragu untuk menghubungi kami melalui email atau telepon. Kami siap
+          membantu Anda dengan senang hati.
+        </p>
+      </div>
+      <div class="form">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473.3818753075466!2d112.73890536278489!3d-7.344234531985925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb36fd52f125%3A0xc6ede174a01aa9d8!2sLapangan%20lele!5e1!3m2!1sid!2sid!4v1754222031344!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="#" method="post">
+          <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="name" placeholder="Masukkan nama Anda" />
+          </div>
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" id="email" placeholder="Masukkan email Anda" />
+          </div>
+          <div class="input-group">
+            <i class="fa-regular fa-message"></i>
+            <input type="text" id="name" placeholder="Masukkan pesan Anda" />
+          </div>
+          <button type="submit" class="btn">Kirim</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="content">
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Kafe Inyonk. All rights reserved.</p>
+        <p>Jl. Ibu</p>
+      </div>
+    </footer>
   </body>
   <script>
     const navbarnav = document.querySelector(".navbar-nav");
@@ -350,5 +669,21 @@
         navbarnav.classList.remove("active");
       }
     });
+
+    const teks = [
+      "Sudah ku pacari kau",
+      "Jangan bilang tidak, bilang saja iya",
+      "iya lebih baik darapada engkau menangis.",
+      "Kalau saja aku bukanlah penganggur"
+    ];
+
+    let index = 0;
+
+    const gantiganti = document.getElementById("desc");
+
+    setInterval(() => {
+      gantiganti.textContent = teks[index];
+      index = (index + 1) % teks.length;
+    }, 4000);
   </script>
 </html>
