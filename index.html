@@ -15,11 +15,11 @@
   </head>
   <style>
     :root {
-      --primary-color: #4b2e2e; /* Coklat kopi panggang */
-      --secondary-color: #a67c52; /* Coklat karamel */
-      --tertiary-color: #d8c3a5; /* Krem hangat */
-      --accent-color: #c49e6c; /* Emas kopi */
-      --background-color: #2e1f1c; /* Coklat gelap latar belakang */
+      --primary-color: #4b2e2e;
+      --secondary-color: #a67c52;
+      --tertiary-color: #d8c3a5;
+      --accent-color: #c49e6c;
+      --background-color: #2e1f1c;
       --text-color: #f5f0e6;
     }
 
@@ -53,13 +53,13 @@
       align-items: center;
       padding: 1.5rem 6%;
       background-color: transparent;
-      border-bottom: 2px solid var(--primary-color);
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.57);
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 999;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(5.7px);
     }
 
     .logo {
@@ -69,7 +69,7 @@
     }
 
     .logo span {
-      color: var(--primary-color);
+      color: var(--secondary-color);
       font-weight: 400;
     }
 
@@ -79,12 +79,13 @@
       font-size: 1.2rem;
       margin: 0 0.8rem;
       transition: all 0.3s ease;
+      font-weight: 500;
     }
 
     .navbar-nav a:hover {
-      color: var(--primary-color);
+      color: var(--secondary-color);
       transition: all 0.3s ease;
-      font-weight: 800;
+      font-weight: 500;
     }
 
     .navbar-extra a {
@@ -95,7 +96,7 @@
     }
 
     .navbar-extra a:hover {
-      color: var(--primary-color);
+      color: var(--secondary-color);
       transition: all 0.3s ease-in-out;
     }
 
@@ -135,13 +136,14 @@
     }
 
     .home .content h1 span {
-      color: var(--primary-color);
+      color: var(--secondary-color);
       font-weight: 1000;
     }
 
     .home .content p {
       font-size: 1.5rem;
       margin: 1rem 0;
+      margin-bottom: 1.7rem;
       color: var(--text-color);
       mix-blend-mode: difference;
     }
@@ -155,6 +157,7 @@
       font-size: 10px;
       border: var(--primary-color) 2px solid;
       transition: all 0.3s ease-in-out;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     .home .content .cta:hover {
@@ -172,17 +175,17 @@
       height: 10%;
       background: linear-gradient(
         180deg,
-        rgba(30, 30, 30, 0) 0%,
-        rgba(30, 30, 30, 0.05) 10%,
-        rgba(30, 30, 30, 0.1) 20%,
-        rgba(30, 30, 30, 0.2) 30%,
-        rgba(30, 30, 30, 0.35) 40%,
-        rgba(30, 30, 30, 0.5) 50%,
-        rgba(30, 30, 30, 0.65) 60%,
-        rgba(30, 30, 30, 0.75) 70%,
-        rgba(30, 30, 30, 0.85) 80%,
-        rgba(30, 30, 30, 0.92) 90%,
-        rgba(30, 30, 30, 1) 100%
+        rgba(46, 31, 28, 0) 0%,
+        rgba(46, 31, 28, 0.05) 10%,
+        rgba(46, 31, 28, 0.1) 20%,
+        rgba(46, 31, 28, 0.2) 30%,
+        rgba(46, 31, 28, 0.35) 40%,
+        rgba(46, 31, 28, 0.5) 50%,
+        rgba(46, 31, 28, 0.65) 60%,
+        rgba(46, 31, 28, 0.75) 70%,
+        rgba(46, 31, 28, 0.85) 80%,
+        rgba(46, 31, 28, 0.92) 90%,
+        rgba(46, 31, 28, 1) 100%
       );
     }
 
@@ -199,7 +202,7 @@
     }
 
     .about h2 span {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .about .row {
@@ -216,6 +219,8 @@
       object-fit: cover;
       object-position: center;
       border-radius: 10px;
+      border: solid 2px var(--tertiary-color);
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     .about .row .content {
@@ -225,7 +230,8 @@
 
     .about .row .content h3 {
       font-size: 1.5rem;
-      color: var(--primary-color);
+
+      color: var(--tertiary-color);
     }
 
     .about .row .content p {
@@ -241,7 +247,7 @@
     }
 
     .menus .content h2 span {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .menus .content p {
@@ -301,6 +307,7 @@
       font-size: 0.7rem;
       border: solid 2px var(--primary-color);
       transition: all 0.3s ease-in-out;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     .menus .row .menus-item .cta:hover {
@@ -322,7 +329,7 @@
     }
 
     .contact h2 span {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .contact .content p {
@@ -337,11 +344,12 @@
 
     .contact .form {
       display: flex;
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
       margin-top: 2rem;
       border-radius: 50px;
       flex-wrap: wrap;
       border: solid 3px var(--primary-color);
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     .contact .form .map {
@@ -392,19 +400,19 @@
       display: inline-block;
       margin-top: 20px;
       padding: 1rem 2.2rem;
-      background-color: var(--primary-color);
-      color: var(--tertiary-color);
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
       border-radius: 5px;
       font-size: 1.5rem;
       cursor: pointer;
-      border: var(--primary-color) 2px solid;
+      border: var(--secondary-color) 2px solid;
       transition: all 0.3s ease-in-out;
       filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     .btn:hover {
-      background-color: var(--tertiary-color);
-      color: var(--primary-color);
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
       transform: scale(1.05);
     }
 
@@ -523,7 +531,7 @@
     <section id="home" class="home">
       <div class="content">
         <h1>Hitam-nya Kopiku, <span>Sehitam Dirimu</span></h1>
-        <p id="desc">Kalau saja aku bukanlah penganggur</p>
+        <p id="desc">'Kalau saja aku bukanlah penganggur'</p>
         <a href="#" class="cta">Tumbas Now</a>
       </div>
     </section>
@@ -569,40 +577,26 @@
         </p>
         <div class="row">
           <div class="menus-item">
-            <img src="properties/americano.jpg" alt="" />
-            <h3 class="menus-title">Kopi Susu</h3>
+            <img src="properties/americano.jpg" alt="americano" />
+            <h3 class="menus-title">/*Americano*/</h3>
             <p class="menus-price">Rp. 25.000</p>
             <a href="#" class="cta">Beli Sekarang</a>
           </div>
           <div class="menus-item">
             <img src="properties/americano.jpg" alt="" />
-            <h3 class="menus-title">Kopi Susu</h3>
-            <p class="menus-price">Rp. 25.000</p>
+            <h3 class="menus-title">/*Americano Buatan Mas Fanu*/</h3>
+            <p class="menus-price">Rp. 90.000</p>
             <a href="#" class="cta">Beli Sekarang</a>
           </div>
           <div class="menus-item">
-            <div class="item-img">
-              <img src="properties/americano.jpg" alt="" />
-            </div>
-            <h3 class="menus-title">Kopi Susu</h3>
-            <p class="menus-price">Rp. 25.000</p>
+            <img src="properties/Cheeseburger.jpg" alt="" />
+            <h3 class="menus-title">/*Burgir*/</h3>
+            <p class="menus-price">Rp. 30.000</p>
             <a href="#" class="cta">Beli Sekarang</a>
           </div>
           <div class="menus-item">
-            <img src="properties/americano.jpg" alt="" />
-            <h3 class="menus-title">Kopi Susu</h3>
-            <p class="menus-price">Rp. 25.000</p>
-            <a href="#" class="cta">Beli Sekarang</a>
-          </div>
-          <div class="menus-item">
-            <img src="properties/americano.jpg" alt="" />
-            <h3 class="menus-title">Kopi Susu</h3>
-            <p class="menus-price">Rp. 25.000</p>
-            <a href="#" class="cta">Beli Sekarang</a>
-          </div>
-          <div class="menus-item">
-            <img src="properties/americano.jpg" alt="" />
-            <h3 class="menus-title">Kopi Susu</h3>
+            <img src="properties/Mendoan.jpeg" alt="" />
+            <h3 class="menus-title">/*Mendoan*/</h3>
             <p class="menus-price">Rp. 25.000</p>
             <a href="#" class="cta">Beli Sekarang</a>
           </div>
@@ -653,7 +647,7 @@
           <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <p>&copy; 2025 Kafe Inyonk. All rights reserved.</p>
+        <p>2025 KafeIn yonk. All rights reserved.</p>
         <p>Jl. Ibu</p>
       </div>
     </footer>
@@ -673,10 +667,10 @@
     });
 
     const teks = [
-      "Sudah ku pacari kau",
-      "Jangan bilang tidak, bilang saja iya",
-      "iya lebih baik darapada engkau menangis.",
-      "Kalau saja aku bukanlah penganggur",
+      "'Sudah ku pacari kau'",
+      "'Jangan bilang tidak, bilang saja iya'",
+      "'iya lebih baik darapada engkau menangis.'",
+      "'Kalau saja aku bukanlah penganggur'",
     ];
 
     let index = 0;
